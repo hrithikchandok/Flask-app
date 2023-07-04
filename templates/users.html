@@ -1,0 +1,32 @@
+{%extends 'base.html' %}
+{%block title%}{{title}}
+{%endblock%}
+{%block content%}
+
+{%if first_name  %}
+    <h1>Thanks for Subsribing {{first_name}},here are others Subsribed Users</h1>
+{%else%}
+    <h1>Subsribed Users</h1>
+{%endif%}
+
+<table>
+     <tr>
+         <th>ID</th>
+         <th>FIRST_NAME</th>
+         <th>LAST_NAME</th>
+         <th>EMAIL</th>
+         <th>COLLEGE_NAME</th>
+     </tr>
+    {%for user in users%}
+        <tr>
+            <td>{{user.id}}</td>
+            <td>{{user.first_name}}</td>
+            <td>{{user.last_name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.college}}</td>
+
+
+        </tr>
+    {%endfor%}
+</table>
+{%endblock%}

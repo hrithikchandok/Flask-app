@@ -1,0 +1,16 @@
+{%extends 'base.html' %}
+{%block title%}{{title}}
+{%endblock%}
+{%block content%}
+ <p>Please confirm your info </p>
+ <ul>
+<!--    <li>{{first_name}}</li>-->
+<!--    <li>{{last_name}}</li>-->
+<!--    <li>{{email}}</li>-->
+<!--    <li>{{college}}</li>-->
+     {{subs}}
+     {%for user in subs%}
+     <li>{{user}}</li>
+     {%endfor%}
+ </ul>
+{%endblock%}
